@@ -8,7 +8,12 @@ struct No {
 };
 
 struct Hash {
- struct No *vetor[Tam];
+ struct No *vetor[TAM];
 };
+
+int hash (char *chave);
+struct No *criarNo(char *chave, int valor);
+void adicionar(struct Hash *tabela, char *chave, int valor);
+int obter(struct Hash *tabela, char *chave);
 
 #endif
