@@ -3,7 +3,7 @@
 #include <string.h>
 #include "index.h"
 
-#DEFINE TAM 10;
+#define TAM 10;
 
 int hash (char *chave) { //função de hash simples
     int hash = 0;
@@ -18,7 +18,7 @@ struct No *criarNo(char *chave, int valor) {
 
     if(novo != NULL) {
         novo->chave = strdup(chave);
-        novo->valor = int valor;
+        novo->valor = valor;
         novo->prox = NULL;
     }
     return novo;
@@ -39,7 +39,7 @@ int obter(struct Hash *tabela, char *chave) {
     struct No *atual = tabela->vetor[indice];
 
     while(atual != NULL) {
-        if(strcmp(atua->chave, chave) == 0) {
+        if(strcmp(atual->chave, chave) == 0) {
             return atual->valor;
         }
         atual = atual->prox;

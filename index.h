@@ -8,7 +8,7 @@ struct No {
 };
 
 struct Hash {
- struct No *vetor[TAM];
+ struct No *vetor[TMP_MAX];
 };
 
 int hash (char *chave);
