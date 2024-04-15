@@ -1,9 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "index.h"
 
 #define TAM 10;
+
+struct No {
+ char *chave;
+ int valor;
+ struct No *prox;
+};
+
+struct Hash {
+ struct No *vetor[TAM];
+};
+
 
 int hash (char *chave) { //função de hash simples
     int hash = 0;
